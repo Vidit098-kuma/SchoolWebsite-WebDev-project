@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Portal Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+    <div class="main-wrapper">
+        <div class="card login-wrapper">
+            <header>
+                <div class="logo">Northbridge High</div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                </nav>
+            </header>
+            <div>
+                <h1 class="page-title">Sign in to the school portal</h1>
+                <p class="page-subtitle">
+                    Use one of the demo accounts to explore. Faculty and students see different dashboards.
+                </p>
+                <div class="badge-small">
+                    Faculty: f001/f002 • password faculty123 | Student: s001/s002 • password student123
+                </div>
+                <form id="loginForm">
+                    <div class="form-row">
+                        <label for="role">I am logging in as</label>
+                        <select id="role" required>
+                            <option value="student">Student</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="userId">User ID</label>
+                        <input id="userId" placeholder="e.g. f001 or s001" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="error-message" id="loginError"></div>
+                    <div class="form-footer">
+                        <span>By logging in you agree to follow the school code of conduct.</span>
+                        <button class="btn-primary" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

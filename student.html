@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student">
+    <div class="main-wrapper">
+        <div class="card">
+            <div class="dashboard-header">
+                <div>
+                    <div class="logo">Northbridge High</div>
+                    <div class="dashboard-title">Student dashboard</div>
+                    <div class="dashboard-subtitle">Your classes, assignments, and attendance in one place.</div>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
+                    <div class="user-pill" id="userName">Student</div>
+                    <div style="font-size:12px; color:#9ca3af;" id="userRole">Student</div>
+                    <button id="logoutBtn" class="btn-secondary">Logout</button>
+                </div>
+            </div>
+            <div class="layout-2">
+                <div class="section">
+                    <div class="section-title">Assignments</div>
+                    <div class="section-subtitle">Check due dates and track what is pending.</div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Title</th>
+                                    <th>Due</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assignmentsBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="section-footer">
+                        Submit your work through the usual classroom process; this is a summary view only.
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Attendance and upcoming</div>
+                    <div class="section-subtitle">Stay on track with your classes.</div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                        <div>
+                            <div style="font-size:12px; color:#9ca3af;">This month’s attendance</div>
+                            <div id="attendanceChip" class="chip">82% this month</div>
+                        </div>
+                        <button id="markPresentBtn" class="btn-primary" type="button">Mark today present</button>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <div style="font-size:13px; font-weight:600; margin-bottom:6px;">Upcoming</div>
+                        <ul class="section-list" id="upcomingList"></ul>
+                    </div>
+                    <div class="section-footer">
+                        Attendance here is a local preview. Actual records are maintained in the school system.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
